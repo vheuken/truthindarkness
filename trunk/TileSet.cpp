@@ -31,3 +31,8 @@ sf::Image TileSet::getTileSetImage()
 {
 	return tileSetImage;
 }
+
+sf::Image TileSet::getTile(int tileNum)
+{
+	//TODO: return a tile from sf::Image tileSetImage
+}
