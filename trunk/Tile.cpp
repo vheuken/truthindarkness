@@ -21,3 +21,4 @@ Tile::Tile(sf::Image tileImage)
 {
 	tileTexture.SetImage(tileImage);
 }
+

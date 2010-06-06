@@ -16,11 +16,9 @@ along with "Truth in Darkness". If not, see <http://www.gnu.org/licenses/>.
 */
 
 #include <iostream>
-#include "Tile.h"
 
 int main()
 {
 
-	system("pause");
 	return 0;
 }
