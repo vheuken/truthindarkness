@@ -25,11 +25,10 @@ class Tile
 {
 private:
 	unsigned int Type;
-	std::string textureDirectory;
-	sf::Sprite texture;
+	sf::Sprite tileTexture;
 
 public:
-	Tile();
+	Tile(sf::Image tileImage);
 	
 	//this enum is in no way complete
 	//and is subject to change

@@ -16,3 +16,8 @@ along with "Truth in Darkness". If not, see <http://www.gnu.org/licenses/>.
 */
 
 #include "Tile.h"
+
+Tile::Tile(sf::Image tileImage)
+{
+	tileTexture.SetImage(tileImage);
+}
