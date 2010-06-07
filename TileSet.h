@@ -20,6 +20,7 @@ along with "Truth in Darkness". If not, see <http://www.gnu.org/licenses/>.
 
 #include <SFML/Graphics.hpp>
 #include <string>
+#include "Tile.h"
 
 class TileSet
 {
@@ -29,11 +30,11 @@ private:
 
 public:
 	TileSet(std::string imageDirectory);
-	std::string getDirectory();
-	sf::Image getTileSetImage();
+	std::string getDirectory() const;
+	sf::Image getTileSetImage() const;
 	
 	//returns a tile
-	sf::Image getTile(int tileNum);
+	Tile getTile(int tileNum) const;
 };
 
 #endif // TILE_SET_H

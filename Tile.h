@@ -21,6 +21,10 @@ along with "Truth in Darkness". If not, see <http://www.gnu.org/licenses/>.
 #include <SFML/Graphics.hpp>
 #include <string>
 
+//standard tile size
+const int TILE_WIDTH  = 32;
+const int TILE_HEIGHT = 32;
+
 class Tile
 {
 private:
