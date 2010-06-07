@@ -22,17 +22,20 @@ TileSet::TileSet(std::string imageDirectory)
 	this->imageDirectory = imageDirectory;
 }
 
-std::string TileSet::getDirectory()
+std::string TileSet::getDirectory() const
 {
 	return imageDirectory;
 }
 
-sf::Image TileSet::getTileSetImage()
+sf::Image TileSet::getTileSetImage() const
 {
 	return tileSetImage;
 }
 
-sf::Image TileSet::getTile(int tileNum)
+Tile TileSet::getTile(int tileNum) const
 {
 	//TODO: return a tile from sf::Image tileSetImage
+
+	//ARBITRARY RETURN TYPE TO PLEASE COMPILER
+	return Tile(sf::Image()); //WILL BE REPLACED
 }
