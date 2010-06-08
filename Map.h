@@ -24,9 +24,10 @@ along with "Truth in Darkness". If not, see <http://www.gnu.org/licenses/>.
 class Map
 {
 private:
+	std::string mapName;
+	std::string mapFilePath;
 	std::ifstream mapFile;
-	std::string mapFileDirectory;
-	
+
 	//map dimensions
 	int width;
 	int height;
@@ -38,7 +39,7 @@ public:
 	Map(std::string mapFileDirectory);
 	int getWidth() const;
 	int getHeight() const;
-	std::string getMapFileDirectory() const;
+	std::string getMapFilePath() const;
 };
 
 #endif // MAP_H
