@@ -28,15 +28,10 @@ const int TILE_HEIGHT = 32;
 class Tile
 {
 private:
-	unsigned int Type;
 	sf::Sprite tileTexture;
 
 public:
 	Tile(sf::Image tileImage);
-	
-	//this enum is in no way complete
-	//and is subject to change
-	typedef enum { null, GRASS, WATER } TileType;
 };
 
 #endif // TILE_H
