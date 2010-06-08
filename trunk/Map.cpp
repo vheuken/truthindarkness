@@ -27,7 +27,7 @@ int Map::getWidth() const
 	return width;
 }
 
-std::string Map::getMapFileDirectory() const
+std::string Map::getMapFilePath() const
 {
-	return mapFileDirectory;
+	return mapFilePath;
 }
