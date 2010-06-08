@@ -30,7 +30,7 @@ private:
 	int height;
 
 	//gets all info from map file
-
+	void parseMapFile();
 
 public:
 	Map();
