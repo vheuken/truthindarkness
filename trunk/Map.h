@@ -19,11 +19,13 @@ along with "Truth in Darkness". If not, see <http://www.gnu.org/licenses/>.
 #define MAP_H
 
 #include <fstream>
+#include <string>
 
 class Map
 {
 private:
 	std::ifstream mapFile;
+	std::string mapFileDirectory;
 	
 	//map dimensions
 	int width;
@@ -33,10 +35,10 @@ private:
 	void parseMapFile();
 
 public:
-	Map();
+	Map(std::string mapFileDirectory);
 	int getWidth() const;
 	int getHeight() const;
-
+	std::string getMapFileDirectory() const;
 };
 
 #endif // MAP_H
