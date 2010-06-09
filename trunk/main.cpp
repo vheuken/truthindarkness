@@ -19,6 +19,6 @@ along with "Truth in Darkness". If not, see <http://www.gnu.org/licenses/>.
 
 int main()
 {
-
+	
 	return 0;
 }
