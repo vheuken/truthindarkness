@@ -17,14 +17,14 @@ along with "Truth in Darkness". If not, see <http://www.gnu.org/licenses/>.
 
 #include "TileSet.h"
 
-TileSet::TileSet(std::string imageDirectory)
+TileSet::TileSet(std::string imagePath)
 {
-	this->imageDirectory = imageDirectory;
+	this->imagePath = imagePath;
 }
 
-std::string TileSet::getDirectory() const
+std::string TileSet::getImagePath() const
 {
-	return imageDirectory;
+	return imagePath;
 }
 
 sf::Image TileSet::getTileSetImage() const
@@ -32,10 +32,10 @@ sf::Image TileSet::getTileSetImage() const
 	return tileSetImage;
 }
 
-Tile TileSet::getTile(int tileNum) const
+sf::Image TileSet::getTileImage(int tileNum) const
 {
 	//TODO: return a tile from sf::Image tileSetImage
 
-	//ARBITRARY RETURN TYPE TO PLEASE COMPILER
-	return Tile(sf::Image()); //WILL BE REPLACED
+	//ARBITRARY RETURN TO PLEASE COMPILER
+	return sf::Image();
 }
