@@ -25,13 +25,15 @@ along with "Truth in Darkness". If not, see <http://www.gnu.org/licenses/>.
 const int TILE_WIDTH  = 32;
 const int TILE_HEIGHT = 32;
 
-class Tile
+class Tile : public sf::Drawable
 {
 private:
 	sf::Sprite tileTexture;
 
 public:
 	Tile(sf::Image tileImage);
+	Tile();
+
 };
 
 #endif // TILE_H

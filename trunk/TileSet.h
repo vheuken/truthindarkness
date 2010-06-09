@@ -26,15 +26,15 @@ class TileSet
 {
 private:
 	sf::Image tileSetImage;
-	std::string imageDirectory;	
+	std::string imagePath;	
 
 public:
-	TileSet(std::string imageDirectory);
-	std::string getDirectory() const;
+	TileSet(std::string imagePath);
+	std::string getImagePath() const;
 	sf::Image getTileSetImage() const;
 	
-	//returns a tile
-	Tile getTile(int tileNum) const;
+	//returns an image to be turned into a tile
+	sf::Image getTileImage(int tileNum) const;
 };
 
 #endif // TILE_SET_H
