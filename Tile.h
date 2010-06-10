@@ -32,8 +32,6 @@ private:
 
 public:
 	Tile(sf::Image tileImage);
-	Tile();
-
 };
 
 #endif // TILE_H

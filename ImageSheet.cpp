@@ -29,7 +29,7 @@ std::string ImageSheet::getImagePath() const
 
 sf::Image ImageSheet::getImageSheetImage() const
 {
-	return ImageSheetImage;
+	return imageSheetImage;
 }
 
 sf::Image ImageSheet::getImage(int tileNum) const
@@ -38,4 +38,14 @@ sf::Image ImageSheet::getImage(int tileNum) const
 
 	//ARBITRARY RETURN TO PLEASE COMPILER
 	return sf::Image();
+}
+
+int ImageSheet::countRows() const
+{
+	return imageSheetImage.GetHeight() / TILE_HEIGHT;
+}
+
+int ImageSheet::countCols() const
+{
+	return imageSheetImage.GetWidth() / TILE_WIDTH;
 }
