@@ -32,7 +32,7 @@ sf::Image ImageSheet::getImageSheetImage() const
 	return ImageSheetImage;
 }
 
-sf::Image ImageSheet::getTileImage(int tileNum) const
+sf::Image ImageSheet::getImage(int tileNum) const
 {
 	//TODO: return a tile from sf::Image ImageSheetImage
 
