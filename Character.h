@@ -27,10 +27,10 @@ private:
 	std::string Name;	
 	int HP;
 	
-	sf::Sprite spriteSheet;
+	ImageSheet spriteSheet;
 
 public:
-	Character();
+	Character(ImageSheet spriteSheet);
 	
 };
 
