@@ -21,12 +21,15 @@ along with "Truth in Darkness". If not, see <http://www.gnu.org/licenses/>.
 #include <SFML/Graphics.hpp>
 #include <string>
 
+#include "ImageSheet.h"
+
 class Character : public sf::Drawable
 {
 private:
 	std::string Name;	
 	int HP;
 	
+
 	ImageSheet spriteSheet;
 
 public:

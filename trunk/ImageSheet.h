@@ -20,13 +20,18 @@ along with "Truth in Darkness". If not, see <http://www.gnu.org/licenses/>.
 
 #include <SFML/Graphics.hpp>
 #include <string>
+
 #include "Tile.h"
 
 class ImageSheet
 {
 private:
-	sf::Image ImageSheetImage;
-	std::string imagePath;	
+	sf::Image imageSheetImage;
+	std::string imagePath;
+
+	//count the number of rows/cols in imagesheet
+	int countRows() const;
+	int countCols() const;
 
 public:
 	ImageSheet(std::string imagePath);
