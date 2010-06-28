@@ -17,15 +17,15 @@ along with "Truth in Darkness". If not, see <http://www.gnu.org/licenses/>.
 
 #include "ImageManager.h"
 
-const sf::Image* ImageManager::getImage(boost::filesystem::path imagePath)
+const sf::Image& ImageManager::getImage(boost::filesystem::path imagePath)
 {
 	// if image is in RAM
-	if ( isImageUsed(imagePath) )
+	if (isImageUsed(imagePath))
 	{
 		return imageMap[imagePath];
 	}
 	// if image is NOT in RAM
-
+	
 	addImage(imagePath);
 	
 	return imageMap[imagePath];
@@ -48,6 +48,13 @@ bool ImageManager::isImageUsed(boost::filesystem::path imagePath)
 
 void ImageManager::addImage(boost::filesystem::path imagePath)
 {
-	sf::Image temp(imagePath.string());
-	imageMap[imagePath] = temp;
+	sf::Image temp;
+	
+	// copies EMPTY IMAGE into imageMap 
+	// copying an empty image doesn't take up very many resources
+	imageMap.insert(std::pair<boost::filesystem::path, sf::Image>
+							 (imagePath, temp));
+
+	// load image
+	imageMap[imagePath].LoadFromFile(imagePath.string());
 }

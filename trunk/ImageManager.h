@@ -19,7 +19,6 @@ along with "Truth in Darkness". If not, see <http://www.gnu.org/licenses/>.
 #define IMAGE_MANAGER_H
 
 #include <map>
-#include <utility>
 #include <boost/filesystem.hpp>
 #include <SFML/Graphics.hpp>
 
@@ -31,7 +30,7 @@ private:
 	void addImage(boost::filesystem::path imagePath);
 
 public:
-	const sf::Image* getImage(boost::filesystem::path imagePath);	
+	const sf::Image& getImage(boost::filesystem::path imagePath);	
 };
 
 #endif // IMAGE_MANAGER_H
