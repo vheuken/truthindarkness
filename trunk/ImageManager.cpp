@@ -29,7 +29,7 @@ bool ImageManager::isImageUsed(boost::filesystem::path imagePath)
 	found = imageMap.find(imagePath);
 
 	// if image is NOT in RAM
-	if ( found == imagePath.end() )
+	if ( found == imageMap.end() )
 	{
 		return false;
 	}
