@@ -19,7 +19,16 @@ along with "Truth in Darkness". If not, see <http://www.gnu.org/licenses/>.
 
 const sf::Image* getImage(boost::filesystem::path imagePath)
 {
-	// TODO: implement getImage
+	// if image is in RAM
+	if ( isImageUsed(imagePath) )
+	{
+		return imageMap[imagePath];
+	}
+	// if image is NOT in RAM
+
+	addImage(imagePath);
+	
+	return imageMap[imagePath];
 }
 
 bool ImageManager::isImageUsed(boost::filesystem::path imagePath)
@@ -39,4 +48,6 @@ bool ImageManager::isImageUsed(boost::filesystem::path imagePath)
 
 void ImageManager::addImage(boost::filesystem::path imagePath)
 {
+	imageMap.insert(pair<boost::filesystem::path,sf::Image>
+						(imagePath,sf::Image(imagePath.string())));
 }
