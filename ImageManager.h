@@ -31,6 +31,7 @@ private:
 
 public:
 	const sf::Image& getImage(boost::filesystem::path imagePath);	
+	static ImageManager& getManager();	
 };
 
 #endif // IMAGE_MANAGER_H
