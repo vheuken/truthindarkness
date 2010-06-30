@@ -58,3 +58,9 @@ void ImageManager::addImage(boost::filesystem::path imagePath)
 	// load image
 	imageMap[imagePath].LoadFromFile(imagePath.string());
 }
+
+ImageManager& ImageManager::getManager()
+{
+	static ImageManager instance;
+	return instance;
+}
