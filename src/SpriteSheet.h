@@ -11,27 +11,22 @@ it will be useful, but WITHOUT ANY WARRANTY; without even the implied
 warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See 
 the GNU General Public License for more details.
 
-You should have received a copy of the GNU General Public License along
+You should have received a copy of the GNU General Public License along 
 with "Truth in Darkness". If not, see <http://www.gnu.org/licenses/>.
 */
 
-#ifndef IMAGE_MANAGER_H
-#define IMAGE_MANAGER_H
+#ifndef SPRITE_SHEET_H
+#define SPRITE_SHEET_H
 
-#include <map>
-#include <boost/filesystem.hpp>
+#include "ImageManager.h"
 #include <SFML/Graphics.hpp>
 
-class ImageManager
+class SpriteSheet
 {
-private:
-	std::map<boost::filesystem::path, sf::Image> imageMap;
-	bool isImageUsed(boost::filesystem::path imagePath);
-	void addImage(boost::filesystem::path imagePath);
-
 public:
-	const sf::Image& getImage(boost::filesystem::path imagePath);	
-	static ImageManager& getManager();	
+	SpriteSheet(sf::Image spriteSheetImage);
+private:
+	sf::Sprite spriteSheet;
 };
 
-#endif // IMAGE_MANAGER_H
+#endif // SPRITE_SHEET_H
