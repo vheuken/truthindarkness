@@ -25,6 +25,8 @@ class SpriteSheet
 {
 public:
 	SpriteSheet(sf::Image spriteSheetImage);
+	sf::Rect<float> getSubImage(int element);
+
 private:
 	sf::Sprite spriteSheet;
 };
