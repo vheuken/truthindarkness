@@ -20,15 +20,19 @@ with "Truth in Darkness". If not, see <http://www.gnu.org/licenses/>.
 
 #include "ImageManager.h"
 #include <SFML/Graphics.hpp>
+#include <map>
 
 class SpriteSheet
 {
+private:
+	// map holds multiple "copies" of the same sprite 
+	// with a set subrect
+	// key valuerefers to tile ID
+	std::map<int, sf::Sprite> spriteSheetMap;
+
 public:
 	SpriteSheet(sf::Image spriteSheetImage);
-	sf::Rect<float> getSubImage(int element);
 
-private:
-	sf::Sprite spriteSheet;
 };
 
 #endif // SPRITE_SHEET_H
