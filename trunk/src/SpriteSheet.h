@@ -22,17 +22,31 @@ with "Truth in Darkness". If not, see <http://www.gnu.org/licenses/>.
 #include <SFML/Graphics.hpp>
 #include <map>
 
+// tile size
+#define TILE_X 16
+#define TILE_Y 16
+
 class SpriteSheet
 {
 private:
+	sf::Sprite spriteSheet;
+
 	// map holds multiple "copies" of the same sprite 
 	// with a set subrect
-	// key valuerefers to tile ID
+	// key value refers to tile ID
 	std::map<int, sf::Sprite> spriteSheetMap;
+
+	// checks if sprite is already in spriteSheetMap
+	bool isSpriteUsed(int tileID);
+
+	void addSprite(int tileID);
+	void setSpriteSheetSubRect(int tileID);
 
 public:
 	SpriteSheet(sf::Image spriteSheetImage);
 
+	//returns a sprite set to the tile's subrect
+	sf::Sprite getTile(int tileID);	
 };
 
 #endif // SPRITE_SHEET_H
