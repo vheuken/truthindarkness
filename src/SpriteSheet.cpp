@@ -21,3 +21,53 @@ SpriteSheet::SpriteSheet(sf::Image spriteSheetImage)
 {
 	spriteSheet.SetImage(spriteSheetImage);
 }
+
+sf::Sprite SpriteSheet::getTile(int tileID)
+{
+	// if sprite is already in spriteMap
+	if ( isSpriteUsed(tileID) )
+	{
+		return spriteSheetMap[tileID];
+	}
+	
+	addSprite(tileID);
+
+	return spriteSheetMap[tileID];
+}
+
+bool SpriteSheet::isSpriteUsed(int tileID)
+{
+	std::map<int, sf::Sprite>::iterator found;
+
+	found = spriteSheetMap.find(tileID);
+
+	// if sprite is NOT in the map
+	if ( found == spriteSheetMap.end() )
+	{
+		return false;
+	}
+
+	return true;
+}
+
+void SpriteSheet::addSprite(int tileID)
+{
+	setSpriteSheetSubRect(tileID);
+	
+	imageMap.insert(std::pair<int, sf::Sprite>(tileID, spriteSheet));
+}
+
+void SpriteSheet::setSpriteSheetSubRect(int tileID)
+{
+	// coordinates for left and right of rect
+	int leftCoord, topCoord;		
+
+	leftCoord = (TILE_X * tileID) % spriteSheet.GetSize().x;
+
+	topCoord = TILE_Y * ((int) i((TILE_Y * tileID) / 
+			   spriteSheet.GetSize().y)-1);
+
+	spriteSheet.setSubRect(sf::IntRect(leftCoord, topCoord
+									   leftCoord + TILE_X,
+									   topCoord  + TILE_Y));
+}
