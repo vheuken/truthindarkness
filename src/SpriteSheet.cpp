@@ -67,7 +67,8 @@ void SpriteSheet::setSpriteSheetSubRect(int tileID)
 	topCoord = TILE_Y * ((int) ((TILE_Y * tileID) / 
 			   spriteSheet.GetSize().y)-1);
 
-	spriteSheet.SetSubRect(sf::IntRect(leftCoord, topCoord,
+	spriteSheet.SetSubRect(sf::IntRect(leftCoord,
+									   topCoord,
 									   leftCoord + TILE_X,
 									   topCoord  + TILE_Y));
 }
