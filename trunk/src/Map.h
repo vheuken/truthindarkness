@@ -18,16 +18,19 @@ with "Truth in Darkness". If not, see <http://www.gnu.org/licenses/>.
 #ifndef MAP_H
 #define MAP_H
 
-#include <boost/filesystem.hpp>
 #include "SpriteSheet.h"
 #include "ImageManager.h"
+#include <boost/filesystem.hpp>
+#include <boost/filesystem/fstream.hpp>
 
 class Map
 {
 private:
 	// obtains data from the map file
-	void mapFileparser();
-		
+	void mapFileParser();
+
+	boost::filesystem::ifstream mapFile;
+	
 public:
 	Map(boost::filesystem::path mapFilePath);
 };
