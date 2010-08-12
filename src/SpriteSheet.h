@@ -20,6 +20,7 @@ with "Truth in Darkness". If not, see <http://www.gnu.org/licenses/>.
 
 #include "ImageManager.h"
 #include <SFML/Graphics.hpp>
+#include <boost/filesystem.hpp>
 #include <map>
 
 // tile size
@@ -43,7 +44,7 @@ private:
 	void setSpriteSheetSubRect(int tileID);
 
 public:
-	SpriteSheet(sf::Image spriteSheetImage);
+	SpriteSheet(sf::Image& spriteSheetImage);
 
 	//returns a sprite set to the tile's subrect
 	sf::Sprite getTile(int tileID);	
