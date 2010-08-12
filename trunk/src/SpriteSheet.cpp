@@ -17,7 +17,7 @@ with "Truth in Darkness". If not, see <http://www.gnu.org/licenses/>.
 
 #include "SpriteSheet.h"
 
-SpriteSheet::SpriteSheet(sf::Image spriteSheetImage)
+SpriteSheet::SpriteSheet(sf::Image& spriteSheetImage)
 {
 	spriteSheet.SetImage(spriteSheetImage);
 }
@@ -68,7 +68,7 @@ void SpriteSheet::setSpriteSheetSubRect(int tileID)
 			   spriteSheet.GetSize().y)-1);
 
 	spriteSheet.SetSubRect(sf::IntRect(leftCoord,
-									   topCoord,
-									   leftCoord + TILE_X,
-									   topCoord  + TILE_Y));
+									topCoord,
+									leftCoord + TILE_X,
+									topCoord  + TILE_Y));
 }
