@@ -22,6 +22,7 @@ with "Truth in Darkness". If not, see <http://www.gnu.org/licenses/>.
 #include "ImageManager.h"
 #include <boost/filesystem.hpp>
 #include <boost/filesystem/fstream.hpp>
+#include <string>
 
 class Map
 {
@@ -30,7 +31,12 @@ private:
 	void mapFileParser();
 
 	boost::filesystem::ifstream mapFile;
-	
+
+	// map properties
+	std::string mapName;
+	int mapWidth, mapHeight;
+		
+
 public:
 	Map(boost::filesystem::path mapFilePath);
 };
