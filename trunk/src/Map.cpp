@@ -24,7 +24,7 @@ Map::Map(boost::filesystem::path mapFilePath)
 	mapFileParser();
 }
 
-void mapFile()
+void mapFileParser()
 {
 	// TODO: implement ^_^
 }
