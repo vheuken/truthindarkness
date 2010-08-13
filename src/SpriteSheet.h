@@ -44,10 +44,13 @@ private:
 	void setSpriteSheetSubRect(int tileID);
 
 public:
-	SpriteSheet(sf::Image& spriteSheetImage);
+	SpriteSheet(const sf::Image& spriteSheetImage);
 
 	//returns a sprite set to the tile's subrect
 	sf::Sprite getTile(int tileID);	
+
+	// returns spriteSheet
+	sf::Sprite getSpriteSheet();
 };
 
 #endif // SPRITE_SHEET_H
