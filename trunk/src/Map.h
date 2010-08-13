@@ -35,7 +35,6 @@ private:
 	// map properties
 	std::string mapName;
 	int mapWidth, mapHeight;
-		
 
 public:
 	Map(boost::filesystem::path mapFilePath);
