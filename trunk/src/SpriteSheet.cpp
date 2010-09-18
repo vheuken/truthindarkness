@@ -56,17 +56,18 @@ void SpriteSheet::addSprite(int tileID)
 	
 	spriteSheetMap.insert(std::pair<int, sf::Sprite>(tileID, spriteSheet));
 }
-
+#include <iostream>
 void SpriteSheet::setSpriteSheetSubRect(int tileID)
 {
 	// coordinates for left and right of rect
 	int leftCoord, topCoord;		
 
-	leftCoord = (TILE_X * tileID) % (int)spriteSheet.GetSize().x;
+	leftCoord = (TILE_X * (tileID-1)) % (int)spriteSheet.GetImage()->GetWidth();
+	std::cout << "leftCoord = " << leftCoord << std::endl;
+	topCoord = (TILE_Y * ((int) ((TILE_Y * tileID-1) / 
+			   spriteSheet.GetImage()->GetHeight())-1)) + TILE_Y;
 
-	topCoord = TILE_Y * ((int) ((TILE_Y * tileID) / 
-			   spriteSheet.GetSize().y)-1);
-
+	std::cout << "topCoord = " << topCoord << std::endl;
 	spriteSheet.SetSubRect(sf::IntRect(leftCoord,
 									topCoord,
 									leftCoord + TILE_X,
