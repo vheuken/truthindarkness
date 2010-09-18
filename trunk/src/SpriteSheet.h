@@ -24,8 +24,8 @@ with "Truth in Darkness". If not, see <http://www.gnu.org/licenses/>.
 #include <map>
 
 // tile size
-#define TILE_X 16
-#define TILE_Y 16
+#define TILE_X 32
+#define TILE_Y 32
 
 class SpriteSheet
 {
