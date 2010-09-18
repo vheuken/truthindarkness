@@ -22,6 +22,7 @@ with "Truth in Darkness". If not, see <http://www.gnu.org/licenses/>.
 #include "ImageManager.h"
 #include <boost/filesystem.hpp>
 #include <boost/filesystem/fstream.hpp>
+#include <rapidxml.hpp>
 #include <string>
 
 class Map
