@@ -7,4 +7,6 @@ There are currently two graphics classes in Truth in Darkness: ImageManager and 
 These classes are used to help display maps and characters.
 
 = Classes =
-(TODO: link to graphics classes individual wikis)
+
+ImageManager
+SpriteSheet
