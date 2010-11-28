@@ -1,6 +1,6 @@
 #summary This page talks about the graphics classes.
 
-= Introduction =
+= Overview =
 
 There are currently two graphics classes in Truth in Darkness: ImageManager and SpriteSheet.
 
