@@ -2,7 +2,7 @@
 
 = Overview =
 
-Add your content here.
+SpriteSheet class is used to access individual tiles of a spritesheet.
 
 
 = Details =
