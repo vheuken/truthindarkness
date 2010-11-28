@@ -6,4 +6,4 @@ ImageManager is used to load image files into the game. It makes sure that only 
 
 = Members =
 
-|| Signature || Parameters || Output || 
+|| *Signature* || *Parameters* || *Output* || 
