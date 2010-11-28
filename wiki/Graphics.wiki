@@ -9,4 +9,5 @@ These classes are used to help display maps and characters.
 = Classes =
 
 ImageManager
+
 SpriteSheet
