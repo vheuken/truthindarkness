@@ -1,0 +1,21 @@
+#summary ImageManager class spec sheet
+
+= Overview =
+
+ImageManager is used to load image files into the game. It makes sure that only one copy of any image is loaded into memory at any given time.
+
+= Members =
+{|border="1" cellpadding="5"
+|-
+! scope="col" | Heading for column 1
+! scope="col" | Heading for column 2
+! scope="col" | Heading for column 3
+|-
+|text for row 1, column 1
+|text for row 1, column 2
+|text for row 1, column 3
+|-
+|text for row 2, column 1
+|text for row 2, column 2
+|text for row 2, column 3
+|}
