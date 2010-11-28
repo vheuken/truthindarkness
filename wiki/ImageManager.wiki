@@ -4,6 +4,8 @@
 
 ImageManager is used to load image files into the game. It makes sure that only one copy of any image is loaded into memory at any given time.
 
+It incorporates the singleton pattern. There should only be one instance of ImageManager.
+
 = Members =
 
 || *Signature* || *Parameters* || *Output* || 
