@@ -34,9 +34,9 @@ Map::Map(const boost::filesystem::path& mapFilePath)
 	mapFileParser();
 }
 
-void mapFileParser()
+void Map::mapFileParser()
 {
-	xercesc::XMLPlatformUtils::Initialize();
+//	xercesc::XMLPlatformUtils::Initialize();
 
-	xercesc::XMLPlatformUtils::Terminate();
+//	xercesc::XMLPlatformUtils::Terminate();
 }
