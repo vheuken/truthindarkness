@@ -30,13 +30,21 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 Map::Map(const boost::filesystem::path& mapFilePath)
 {
 	mapFile.open(mapFilePath);
-	
+
 	mapFileParser();
 }
 
 void Map::mapFileParser()
 {
-//	xercesc::XMLPlatformUtils::Initialize();
+	boost::property_tree::ptree pt;
 
-//	xercesc::XMLPlatformUtils::Terminate();
+	boost::property_tree::read_xml(mapFile, pt);
+	std::cout << pt.get_child() << endl; 
+}
+
+void Map::printProperties()
+{
+	std::cout << "Printing map properties..." << std::endl;
+
+	std::cout << "Finished printing map properties...." << std::endl;
 }

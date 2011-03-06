@@ -32,8 +32,10 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #include "ImageManager.h"
 #include <boost/filesystem.hpp>
 #include <boost/filesystem/fstream.hpp>
-//#include <xercesc/util/PlatformUtils.hpp>
+#include <boost/property_tree/ptree.hpp>
+#include <boost/property_tree/xml_parser.hpp>
 #include <string>
+#include <iostream>
 
 class Map
 {
@@ -49,6 +51,9 @@ private:
 
 public:
 	Map(const boost::filesystem::path& mapFilePath);
+
+	// print properties to console
+	void printProperties();
 };
 
 #endif // MAP_H
