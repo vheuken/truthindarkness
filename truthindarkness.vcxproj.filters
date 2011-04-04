@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="tests">
+      <UniqueIdentifier>{6ce94410-8829-4226-9190-077d7a96d3f2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src">
+      <UniqueIdentifier>{7489520c-993a-43ed-9c9a-cf47c471d72c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\Graphics">
+      <UniqueIdentifier>{76d7b47f-e927-4e8e-b56e-40d2ca2b8802}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="tests\Graphics">
+      <UniqueIdentifier>{a7d075dd-91e3-45d9-94ef-fd4de9bd62e9}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>
